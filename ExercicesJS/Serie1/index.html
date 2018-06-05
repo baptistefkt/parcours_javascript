@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercice JS serie 1</title>
+</head>
+<body>
+  <script type="text/javascript" src="javascript.js"></script>
+  <script type="text/javascript">
+
+        //exercice 2
+        var nom = 'Firket',
+        prénom = 'Baptiste',
+        ville = 'Bruxelles';
+
+        alert('Nom: ' + nom + '\n' + 'Prénom: '+ prénom + '\n' + 'Ville: ' + ville);
+
+        //exercice3
+        alert('Bonjour ' + prompt('Quel est votre nom ?'));
+
+        //exercice4
+        alert('Nom :' + prompt('Quel est votre nom ?') + '\n' + 'Prénom: '+ prompt('Quel est votre prénom ?') + '\n' + 'Ville: ' + prompt('Dans quelle ville habitez-vous ?'));
+
+        //exercice5
+
+        var nombre1 = parseInt(prompt('Tappez un nombre à virgule'), 10),
+            nombre2 = prompt('Tappez un second nombre à virgule')
+
+        var multiple = function (a,b) {
+          return a * b;
+        }
+
+        alert(multiple(nombre1,nombre2))
+
+        //exercice6
+
+        alert(reste(nombre1,nombre2));   //la fonction reste est définie dans un fichier à part
+
+        //exercice7
+
+        var pointure = prompt('Quel est votre pointure ?'),
+            naissance = prompt('Quelle est votre année de naissance ?')
+
+        var result = function(a,b) {
+          return (a * 2 + 5) * 50 - b + 1766;
+        }
+
+      alert(result(pointure, naissance));
+
+    //exercice8
+
+    var age = prompt('Quel est votre âge ?')
+
+    if (age >= 18) {
+      alert('Vous êtes majeur');
+    } else if (age<18){
+      alert('Vous êtes mineur');
+    } else {
+      alert('Entrée non valide')
+    }
+
+  </script>
+
+</body>
+</html>
