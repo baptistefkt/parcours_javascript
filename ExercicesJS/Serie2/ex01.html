@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex01</title>
+  </head>
+  <body>
+    <main>
+      <button type="button" name="button" id="button_air">Calculer la surface d'un rectangle</button>
+      <button type="button" name="button" id="button_peri">Calculer le périmètre d'un rectangle</button>
+    </main>
+    <script type="text/javascript">
+
+      let buttonA = document.getElementById('button_air');
+      let surface = function(){
+        let largeur = parseInt(prompt('Indiquez la largeur en cm'));
+        let longueur = parseInt(prompt('Indiquez la longueur en cm'));
+        let result = largeur * longueur;
+        alert('La surface du rectangle est de ' + result + ' cm2');
+      };
+
+      if(buttonA) {
+        buttonA.addEventListener('click', function(){
+          surface();
+        })
+      };
+
+
+      let buttonB = document.getElementById('button_peri');
+      let perimetre = function(){
+        let largeur = parseInt(prompt('Indiquez la largeur en cm')),
+            longueur = parseInt(prompt('Indiquez la longueur en cm')),
+            result = (largeur + longueur) * 2;
+            alert('Le périmètre du rectangle est de ' + result + ' cm');
+      };
+
+      if(buttonB) {
+        buttonB.addEventListener('click', function(){
+          perimetre();
+        })
+      };
+
+
+    </script>
+  </body>
+</html>
