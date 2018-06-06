@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 2</title>
+  </head>
+  <body>
+    <main>
+      <button type="button" name="button" id="btn">Clique!</button>
+    </main>
+    <script type="text/javascript">
+      let a = 3,
+          b = 2;
+
+      let triple = function(x) {
+      return x * 3 ;
+      };
+
+      let affiche = function () {
+      alert(triple(a)),alert(triple(b));
+      };
+
+      let button = document.getElementById('btn');
+      button.addEventListener('click', function(){
+      affiche();
+      });
+
+    </script>
+  </body>
+</html>
