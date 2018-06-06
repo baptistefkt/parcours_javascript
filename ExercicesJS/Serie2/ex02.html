@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 2</title>
+  </head>
+  <body>
+    <main>
+      <button type="button" name="button" id="btn">Clique!</button>
+    </main>
+    <script type="text/javascript">
+      let rayon = parseInt(prompt('Indiquez la valeur du rayon en cm'));
+
+
+      let buttonA = document.getElementById('btn');
+
+      if(buttonA) {
+        buttonA.addEventListener('click', function(){
+          calculAir(rayon);
+        });
+      };
+
+      let calculAir = function(x) {
+
+        let result = Math.PI * x * x;
+        alert('La surface = ' + result + ' cm2');
+      };
+
+
+
+    </script>
+  </body>
+</html>

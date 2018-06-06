@@ -14,7 +14,7 @@
     <script type="text/javascript">
 
       let buttonA = document.getElementById('button_air');
-      let surface = function(){
+      let surfaceRectangle = function(){
         let largeur = parseInt(prompt('Indiquez la largeur en cm'));
         let longueur = parseInt(prompt('Indiquez la longueur en cm'));
         let result = largeur * longueur;
@@ -29,7 +29,7 @@
 
 
       let buttonB = document.getElementById('button_peri');
-      let perimetre = function(){
+      let periRectangle = function(){
         let largeur = parseInt(prompt('Indiquez la largeur en cm')),
             longueur = parseInt(prompt('Indiquez la longueur en cm')),
             result = (largeur + longueur) * 2;
@@ -38,7 +38,7 @@
 
       if(buttonB) {
         buttonB.addEventListener('click', function(){
-          perimetre();
+          periRectangle();
         })
       };
 
