@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Exercice 4</title>
   </head>
   <body>
+    <button type="button" name="button" id="btn">Click my face dude!</button>
+
     <script type="text/javascript">
-      
+      let tab = [-2, 1, 4 ];
+      let additionne = function(x) {
+        return x += 2;
+      }
+      let affiche = function(){
+        alert(additionne(tab[0])); alert(additionne(tab[2]));
+      }
+
+      let button = document.getElementById('btn');
+      button.addEventListener('click', function(){
+        affiche();
+      });
     </script>
 
   </body>
