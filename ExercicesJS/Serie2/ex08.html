@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    </head>
+    <body>
+        <button type="button" name="button" id="btn">Click me</button>
+
+        <script type="text/javascript">
+
+            let date = new Date();
+            let jourDeLaSemaine = date.getDay();
+
+
+            let button = document.getElementById('btn');
+            button.addEventListener('click', function(){
+
+                switch(jourDeLaSemaine) {
+                    case 0:
+                        alert("Dimanche");
+                    break;
+                    case 1:
+                        alert('Lundi');
+                    break;
+                    case 2:
+                        alert('Mardi');
+                    break;
+                    case 3:
+                        alert("Mercredi");
+                      break;
+                    case 4:
+                        alert('Jeudi');
+                      break;
+                    case 5:
+                        alert('Vendredi');
+                      break;
+                    case 6:
+                        alert('Samedi');
+
+                    }
+                })
+
+        </script>
+    </body>
+</html>

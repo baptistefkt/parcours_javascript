@@ -12,29 +12,58 @@
 
 
     <script type="text/javascript">
-      //first
-        // let b = 2,
-        //     a = b++;
-        // let affiche = function() {
-          alert('La formule');
-        // }
-        // affiche();
+      //1st
+        /*
+        let b = 2,
+             a = b++;
+         let affiche = function() {
+          alert('Pour a = b++ : a = ' + a + ' et b = ' + b);
+         }
+        affiche();
+        */
 
-      //second
+      //2d
         // let b = 2,
         //     a = ++b;
         // let affiche = function() {
-        //   alert(a); alert(b);
+        //   alert('Pour a = ++b : a = ' + a + ' et b = ' + b);
         // }
         // affiche();
 
-      //third
+      //3d
+      /*
       let b = 2,
           a = b--;
       let affiche = function() {
-        alert(a); alert(b);
+        alert('Pour a = b-- : a = ' + a + ' et b = ' + b);
       }
       affiche();
+      */
+      //4th
+      /*
+      let b = 2,
+          a = --b;
+      let affiche = function() {
+        alert('Pour a = --b : a = ' + a + ' et b = ' + b);
+      }
+      affiche();
+      */
+
+      //5th
+
+      let b = 2,
+          a = 0;
+      let calcul = function (x, y) {
+        return x += y++;
+        }
+      calcul(a, b);
+
+      let affiche = function() {
+        alert('Pour a+= b++ : a = ' + a + ' et b = ' + b);
+      }
+      affiche();
+
+
 
     </script>
   </body>
