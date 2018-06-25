@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercice 13</title>
+    </head>
+    <body>
+        <button type="button" name="button" id="btn">Calcul IMC</button>
+        <script type="text/javascript">
+
+            let button = document.getElementById('btn');
+
+            function calculIMC(){
+                let taille = Number(prompt('Entrez votre taille en cm')),
+                tailleM = taille * Math.pow(10, -2),
+                poids = Number(prompt('Entrez votre poids en kg')),
+                imc = poids / (tailleM * tailleM);
+                alert('Votre IMC est de : ' + Math.round(imc*100)/100);
+
+                if (imc < 16.5) {
+                    alert('Votre corpulence : dénutrition ou famine');
+                } else if (16.5 <= imc && imc < 18.5) {
+                    alert('Votre corpulence : maigreur');
+                } else if (18.5 <= imc && imc < 25) {
+                    alert('Votre corpulence : corpulence normale');
+                } else if (25 <= imc && imc < 30) {
+                    alert('Votre corpulence : surpoids');
+                } else if (30 <= imc && imc < 35) {
+                    alert('Votre corpulence : obésité modérée');
+                } else if (34 <= imc && imc < 40) {
+                    alert('Votre corpulence : obésité sévère');
+                } else if (40 <= imc) {
+                    alert('Votre corpulence : obésité morbide');
+                } else {
+                    alert('Valeur annormale');
+                };
+
+                /*
+                - moins de 16,5 : dénutrition ou famine
+                - 16,5 <= IMC < 18,5 : maigreur
+                - 18,5 <= IMC < 25 : corpulence normale
+                - 25 <= IMC < 30 : surpoids
+                - 30 <= IMC < 35 : obésité modérée
+                - 35 <= IMC < 40 : obésité sévère
+                - plus de 40 : obésité morbide
+                */
+            }
+            button.addEventListener('click', function(){
+                calculIMC();
+            })
+        </script>
+
+    </body>
+</html>

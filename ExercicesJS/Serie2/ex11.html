@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <button type="button" name="button" id="btn">Click</button>
+        <script type="text/javascript">
+            let button = document.getElementById('btn');
+            function calculMoyenne() {
+                let nbr = Number(prompt("Entrez un nombre entier :"));
+                while (isNaN(nbr)) {
+                    alert("Error");
+                    nbr = Number(prompt("Entrez un nombre entier :"));
+                }
+                let result = 0;
+                let i = 0;
+                while (nbr >= 0) {
+
+                    result += nbr;
+                    i++;
+                    nbr = Number(prompt("Entrez un nombre entier :"));
+                    while (isNaN(nbr)) {
+                        alert("Error");
+                        nbr = Number(prompt("Entrez un nombre entier :"));
+                    }
+                }
+                alert('nombre de valeur(s) entrée(s) : ' + i);
+                alert(result / i);
+            }
+
+
+
+
+
+
+            button.addEventListener('click', function(){
+                calculMoyenne();
+            });
+        </script>
+
+    </body>
+</html>

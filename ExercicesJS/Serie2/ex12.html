@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercice 12</title>
+    </head>
+    <body>
+        <button type="button" name="button" id="btn">Temperature Converter</button>
+        <script type="text/javascript">
+
+            let button = document.getElementById('btn');
+
+            function conversionTemperature(){
+
+                let menuNbr = parseInt(prompt("Entrez le chiffre correspondant à votre choix parmi : \n0. Fin du programme \n1. De Celsius vers Fahrenheit \n2. De Celsius vers Kelvin \n3. De Fahrenheit vers Celsius \n4. De Fahrenheit vers Kelvin \n5. De Kelvin vers Celsius \n6. De Kelvin vers Fahrenheit"));
+
+                let temp = Number(prompt("Entrez la température à convertir :"));
+                let result = 0;
+                // soit avec un if/else, soit avec un switch;
+
+                /*if (menuNbr == 1){
+                    result = (temp * 9 / 5) + 32;
+                    alert(temp + ' degré Celsius = ' + result + ' degré Fahrenheit');
+                } else if (menuNbr == 2) {
+                    result = temp + 273.15;
+                    alert(temp + ' degré Celsius = ' + result + ' Kelvin');
+                } else if (menuNbr == 3) {
+                    result = (temp - 32) / (9/5);
+                    alert (result);
+                } else if (menuNbr == 4) {
+                    result = ((temp - 32) * (5/9)) + 273.15;
+                    alert(result);
+                } else if (menuNbr == 5) {
+                    result = temp - 273.15;
+                    alert(result);
+                } else if (menuNbr == 6) {
+                    result = (temp * 9/5) - 459.67;
+                    alert(result);
+                } else {
+                    alert("Error. Il semble que la valeur entrée ne soit pas un nombre.");
+                }*/
+                switch (menuNbr) {
+                    case 1:
+                    result = (temp * 9 / 5) + 32;
+                    alert(temp + ' degré Celsius = ' + result + ' degré Fahrenheit');
+                        break;
+                    case 2:
+                    result = temp + 273.15;
+                    alert(temp + ' degré Celsius = ' + result + ' Kelvin');
+                        break;
+                    case 3:
+                    result = (temp - 32) / (9/5);
+                    alert (temp + ' degré Fahrenheit  = ' + result + ' degré Celsius');
+                        break;
+                    case 4:
+                    result = ((temp - 32) * (5/9)) + 273.15;
+                    alert(temp + ' degré Fahrenheit = ' + result + ' Kelvin');
+                        break;
+                    case 5:
+                    result = temp - 273.15;
+                    alert(temp + ' Kelvin = ' + result + ' degré Celsius');
+                        break;
+                    case 6:
+                    result = (temp * 9/5) - 459.67;
+                    alert(temp + ' Kelvin = ' + result + ' degré Fahrenheit');
+                        break;
+                    default:
+                    alert("Error. Il semble que la valeur entrée ne soit pas un nombre.");
+
+                }
+            }
+
+        /*
+            [K] = [°C] + 273,15
+            [°C] = ([°F] - 32) / (9/5)
+            [K] = (([°F] - 32) x (5/9)) + 273,15
+            [°C] = [K] - 273,15
+            [°F] = ([K] x 9/5) - 459,67
+        */
+
+
+
+            button.addEventListener('click', function(){
+                conversionTemperature();
+            })
+        </script>
+
+    </body>
+</html>
